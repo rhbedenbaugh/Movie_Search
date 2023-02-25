@@ -14,7 +14,7 @@
 
 body {
   font-family: var(--font-roboto);
-  background-color: #212426;
+  background-color: #b3afa6;
 }
 
 .app {
@@ -29,11 +29,12 @@ body {
 h1 {
   font-size: 3rem;
   letter-spacing: 0.9px;
+  -webkit-text-stroke: 1px black;
   background: linear-gradient(
     90deg,
-    rgba(249, 211, 180, 1) 0%,
-    rgba(249, 211, 180, 0) 100%
-  );
+    rgba(0,0,0, 1) 0%,
+    rgba(230, 225, 213, 0) 100%
+    );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

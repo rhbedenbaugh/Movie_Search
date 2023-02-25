@@ -6,7 +6,7 @@ import './App.css';
 
 const API_URL = 'https://www.omdbapi.com/?apikey=a7287d95&';
 
-function App () {
+function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [movies, setMovies] = useState([]);
 
@@ -27,11 +27,19 @@ function App () {
 
       <div className='search'>
         <input
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              document.getElementById('imgBtn').click();
+            }
+          }}
+          id='myInput'
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder='Search for movies'
         />
         <img
+          id='imgBtn'
           src={SearchIcon}
           alt='search'
           onClick={() => searchMovies(searchTerm)}
@@ -51,6 +59,6 @@ function App () {
       )}
     </div>
   );
-};
+}
 
 export default App;
